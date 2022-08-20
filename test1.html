@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="stylesheet" href="test1.css" />
+    <script src="test1.js"></script>
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: rgb(219, 227, 235);
+    text-align: center;
+}
+fieldset{
+    padding:50px;
+    width:550px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 80px;
+    margin:30px;
+    min-width: 200px ;
+    background-color: white;
+}
+input{
+    padding: 7px;
+    font-size: 14px;
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: rgb(240, 232, 232);
+    color:rgb(92, 98, 104);
+    border: 0px;
+}
+input:focus, textarea{
+    color:black;
+    background-color: white;
+}
+input[type='text']:valid{
+  color:black;
+  font-size: 1em;
+  background-color: rgb(241, 195, 218);
+}
+input[type="submit"]:hover{
+    opacity: 1;
+    transform: scale(1,1);
+    border:1px solid;
+    font-size: 20px;
+    color:whitesmoke;
+    background-color: rgb(158, 14, 158);
+}
+label{
+    width:250px;
+    display: inline-block;
+    vertical-align:middle;
+    font-size: 15px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+input[type="submit"]{
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(223, 143, 223);
+    color: purple;
+    cursor: pointer;
+    font-size: 18px;
+    border:1px solid rgb(158, 14, 158);
+}
+</style>
+<body>
+    <form id="form" name="formName">
+      <fieldset>
+        <div>
+            <label for="formName"> SELECT YOUR SOURCE  </label>
+            <input type="text" id="text" name="formName"  pattern="[A-Za-z0-9 ]+" minlength="5" title="No special character" required/><br>
+            <label for="formName"> PROVIDE A PIPELINE  </label>
+            <input type="text" id="text" name="formName" placeholder="cust_shop_energy_gkateway001" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <label for="formName"> GCS PROJECT NAME  </label>
+            <input type="text" id="text" name="formName" placeholder="project-id" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <label for="formName"> GCS BUCKET NAME  </label>
+            <input type="text" id="text" name="formName" placeholder="gs://your-bucket" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <label for="formName"> INPUT CLOUD STORAGE FILES  </label>
+            <input type="text" id="text" name="formName" placeholder="GCS location of your files" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <label for="formName"> GCS CEREDENTIALS  </label>
+            <input type="text" id="text" name="formName" placeholder="gs://your-bucket/your-files/0.1csv" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <label for="formName"> RUN EVERY  </label>
+            <input type="text" id="text" name="formName" placeholder="(In minutes)" minlength="5" pattern="[a-zA-Z0-9 ]+" title="No special character" required><br>
+            <input type="submit" value="CREATE">
+            <input type="submit" value="CANCEL">
+        </div>
+      </fieldset>  
+    </form>
+</body>
+<script></script>
+</html>
